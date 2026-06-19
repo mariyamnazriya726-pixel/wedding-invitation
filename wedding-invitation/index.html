@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#26372f" />
+    <title>Najah & Vahid | Nikkah Invitation</title>
+    <meta name="description" content="You are warmly invited to the nikkah of Najah Parvin and Vahid." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Najah & Vahid | Nikkah Invitation" />
+    <meta property="og:description" content="Join us on 22 August 2026 as we begin our forever." />
+    <meta property="og:image" content="assets/couple.jpeg" />
+    <link rel="preload" href="assets/envelope.jpeg" as="image" />
+    <link rel="preload" href="assets/couple.jpeg" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="opening" id="opening">
+      <button class="opening-button" id="openInvitation" type="button" aria-label="Open wedding invitation">
+        <img src="assets/envelope.jpeg" alt="Tap to open wedding invitation envelope" />
+      </button>
+    </section>
+
+    <main class="invitation" id="invitation">
+      <section class="couple-slide slide">
+        <img src="assets/couple.jpeg" alt="Najah Parvin and Vahid nikkah invitation" />
+        <a class="scroll-cue" href="#message">Scroll <i></i></a>
+      </section>
+
+      <section class="card-slide slide reveal" id="message">
+        <div class="card-copy">
+          <p class="kicker">With love and duas</p>
+          <h1>We request your presence and prayers</h1>
+          <p data-edit="message">
+            As we begin this beautiful journey together, we would be honoured to have you with us
+            to bless our nikkah with your love, duas, and warm wishes.
+          </p>
+        </div>
+      </section>
+
+      <section class="card-slide slide reveal" id="dateReveal">
+        <div class="card-copy">
+          <p class="kicker">Save the date</p>
+          <h2>Scratch to reveal</h2>
+          <div class="scratch-grid">
+            <div class="scratch-circle"><strong>22</strong><span>Date</span><canvas></canvas></div>
+            <div class="scratch-circle"><strong>Saturday</strong><span>Day</span><canvas></canvas></div>
+            <div class="scratch-circle"><strong>2026</strong><span>Year</span><canvas></canvas></div>
+          </div>
+          <p class="hint">Scratch each circle from left to right</p>
+        </div>
+      </section>
+
+      <section class="card-slide slide reveal">
+        <div class="card-copy">
+          <p class="kicker">Counting every heartbeat</p>
+          <h2>Until the nikkah</h2>
+          <div class="countdown" id="countdown">
+            <div><strong data-time="days">00</strong><span>Days</span></div>
+            <div><strong data-time="hours">00</strong><span>Hours</span></div>
+            <div><strong data-time="minutes">00</strong><span>Minutes</span></div>
+            <div><strong data-time="seconds">00</strong><span>Seconds</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-slide slide reveal" id="venue">
+        <div class="card-copy">
+          <p class="kicker">Venue and time</p>
+          <h2>Nikkah</h2>
+          <div class="detail-box">
+            <span>22 August 2026</span>
+            <strong>11:30</strong>
+          </div>
+          <p>Your presence will make our day complete.</p>
+        </div>
+      </section>
+
+      <section class="card-slide slide reveal" id="location">
+        <div class="card-copy">
+          <p class="kicker">Location</p>
+          <h2>Join us</h2>
+          <p>Open the map for directions to the nikkah.</p>
+          <a class="primary-button" id="mapButton" href="https://share.google/QL74v80dW5jhFCuy5">Open map</a>
+        </div>
+      </section>
+
+      <section class="card-slide slide reveal" id="rsvp">
+        <div class="card-copy">
+          <p class="kicker">RSVP</p>
+          <h2>Will you attend the nikkah?</h2>
+          <div class="choice-row">
+            <button class="rsvp-option" type="button" data-rsvp-choice="yes">Yes</button>
+            <button class="rsvp-option" type="button" data-rsvp-choice="no">No</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-slide slide reveal hidden" id="rsvpYes">
+        <div class="card-copy">
+          <p class="kicker">We are happy to welcome you</p>
+          <h2>Your RSVP</h2>
+          <form name="wedding-rsvp-yes" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="rsvp-form">
+            <input type="hidden" name="form-name" value="wedding-rsvp-yes" />
+            <input type="hidden" name="attending" value="Yes" />
+            <p class="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
+            <label class="field">Your name<input name="name" type="text" placeholder="Enter your name" required /></label>
+            <label class="field">How many people are coming?<input name="guests" type="number" min="1" max="25" value="1" required /></label>
+            <button class="primary-button" type="submit">Send RSVP</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="card-slide slide reveal hidden" id="rsvpNo">
+        <div class="card-copy">
+          <p class="kicker">We will miss your presence</p>
+          <h2>Your response</h2>
+          <form name="wedding-rsvp-no" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="rsvp-form">
+            <input type="hidden" name="form-name" value="wedding-rsvp-no" />
+            <input type="hidden" name="attending" value="No" />
+            <p class="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
+            <label class="field">Your name<input name="name" type="text" placeholder="Enter your name" required /></label>
+            <label class="field">Reason for not coming<textarea name="reason" placeholder="Share your reason" required></textarea></label>
+            <button class="primary-button" type="submit">Send response</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <audio id="music" preload="metadata">
+      <source src="assets/music-clip.mov" type="video/quicktime" />
+      <source src="assets/music.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
